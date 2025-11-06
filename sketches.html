@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sketches</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <p>Laureano Meyer</p>
+  </header>
+
+    <section class="about">
+    <p>Sketches</p>
+    <hr>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery"></section>
+
+  <script>
+
+    const folder = 'assets/Sketches/';
+
+    const images = [
+      'img1.png',
+      'img2.png',
+      'img3.png'
+    ];
+
+    const gallery = document.getElementById('gallery1');
+
+    images.forEach(name => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `<img src="${folder + name}" alt="${name}">`;
+      gallery.appendChild(card);
+    });
+  </script>
+  <footer>
+    <p>Commissions via mail</p>
+  </footer>
+</body>
+</html>

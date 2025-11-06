@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Art</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <p>Laureano Meyer</p>
+  </header>
+
+    <section class="about">
+    <p>Game Art</p>
+    <hr>
+    </div>
+  </section>
+
+  <section class="gallery1" id="gallery1"></section>
+
+  <script>
+
+    const folder = 'assets/GameArt/';
+
+    const images = [
+      'img1.png',
+      'img2.png',
+      'img3.png',
+      'img4.png',
+      'img5.png',
+      'img6.png',
+      'img7.png',
+      'img8.png',
+      'img9.png'
+
+    ];
+
+    const gallery = document.getElementById('gallery1');
+
+    images.forEach(name => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `<img src="${folder + name}" alt="${name}">`;
+      gallery.appendChild(card);
+    });
+  </script>
+  <footer>
+    <p>Commissions via mail</p>
+  </footer>
+</body>
+</html>
